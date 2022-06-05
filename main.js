@@ -430,7 +430,7 @@ import random from './getRandom';
 /***** .splice() *****/
 // 원본 수정됨 주의!
 // .splice(index, 삭제갯수) : 해당index에 지정갯수만큼 삭제
-// .splice(index, 0, 요소,...) : 해당 index에 요소를 삽입
+// .splice(index, 0, 요소,...) : 해당 index에 한개이상의 요소를 삽입
 // const numbers = [1, 2, 3, 4]
 // const fruits = ['Apple', 'Banana', 'Cherry'];
 
@@ -447,10 +447,46 @@ import random from './getRandom';
 //////////////////////////////////////////////////////////////////
 /***** Object *****/
 /***** .assign(대상객체, 출처객체,....) *****/
-// 대상객체에 출처객체를 복사하여 객체를 반환한다.
-const target = {a: 1, b: 2}
-const source = {b: 4, c: 5}
+// 대상객체에 한개이상의 출처객체를 복사하여 객체를 반환한다.
+// const userAge = {
+//   // key: value
+//   name: 'Hanail',
+//   age: 54
+// }
 
-const returnedTarget = Object.assign(target, source)
-console.log(target)
-console.log(returnedTarget)
+// const userEmail = {
+//   name: 'hanail',
+//   email: 'hanail011250@gmail.com'
+// }
+
+// const target = Object.assign(userAge, userEmail)
+// const targetAdd = Object.assign({}, userAge, userEmail)
+// console.log(userAge)
+// console.log(userEmail)
+// console.log(target)
+// console.log(target === userAge)
+// console.log(target === userEmail)
+// console.log(targetAdd)
+// console.log(target === targetAdd)
+// console.log(userAge === targetAdd)
+// console.log(userEmail === targetAdd)
+
+// const a = {k: 123}
+// const b = {k: 123}
+// console.log(a === b)
+
+
+/***** .keys() *****/
+// const user = {
+//   name: 'Hanail',
+//   age: 54,
+//   email: 'hanail011250@gmail.com'
+// }
+
+// const keys = Object.keys(user)
+// console.log(keys) // 객체데이터의 키값만 반환하여 배열로 생성
+
+// console.log(user['email'])
+
+// const values = keys.map(key => user[key])
+// console.log(values)
