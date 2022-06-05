@@ -477,6 +477,7 @@ import random from './getRandom';
 
 
 /***** .keys() *****/
+// 객체데이터의 키값만 반환하여 배열로 생성
 // const user = {
 //   name: 'Hanail',
 //   age: 54,
@@ -484,7 +485,7 @@ import random from './getRandom';
 // }
 
 // const keys = Object.keys(user)
-// console.log(keys) // 객체데이터의 키값만 반환하여 배열로 생성
+// console.log(keys)
 
 // console.log(user['email'])
 
