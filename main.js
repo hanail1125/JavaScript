@@ -1,4 +1,5 @@
-import random from './getRandom';
+import random from './getRandom'
+import _ from 'lodash'
 
 /***** 삼항 연산자(ternary operator) *****/
 
@@ -491,3 +492,63 @@ import random from './getRandom';
 
 // const values = keys.map(key => user[key])
 // console.log(values)
+
+
+/***** 구조 분해 할당(Destructuring assingmnent) *****/
+// 비구조화 할당
+// const user = {
+//   name: 'Hanail',
+//   age: 54,
+//   email: 'hanail011250@gmail.com',
+//   address:'USA'
+// }
+
+// const {name: Hanail, age, email, address = 'Korea'} = user
+
+// console.log(`사용자의 이름은 ${Hanail} 입니다.`)
+// console.log(`${Hanail}의 나이는 ${age}세 입니다.`)
+// console.log(`${Hanail}의 이메일 주소는 ${email} 입니다.`)
+// console.log(address)
+
+
+// const fruits = ['Applle', 'Banana', 'Cherry']
+// const [, b] = fruits
+// console.log(b)
+
+
+/***** 전개 연산자(Spread) *****/
+// const fruits = ['Applle', 'Banana', 'Cherry', 'Orange']
+
+// console.log(fruits)
+// console.log(...fruits)
+
+// const toObject = (a, b, ...c) => ({a, b, c})
+// console.log(toObject(...fruits))
+
+
+/***** 데이터 불변성(Immutability) */
+// 원시 데이터 String, Number, Boolean, underfined, null
+// 참조형 데이터: Object, Array, function
+
+
+//***** 얕은 복사(shallow copy), 깊은 복사(Deel copy) */
+const user = {
+  name: 'Hanail',
+  age: 54,
+  emails: ['hanail011250@gmail.com'],
+  address:'korea'
+}
+
+// const copyUser = Object.assign({}, user) // 첫번째 (얕은)복사방법
+// const copyUser = {...user} // 두번째 (얕은)복사방법
+const copyUser = _.cloneDeep(user) // 세번째 (깊은)복사방법
+console.log(copyUser === user)
+
+user.age = 22
+console.log('user', user)
+console.log('copyUser', copyUser)
+
+user.emails.push('hsi05200@naver.com')
+console.log(user.emails === copyUser.emails)
+console.log('user', user)
+console.log('copyUser', copyUser)

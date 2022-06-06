@@ -12,5 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "core-js": "^3.22.7"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.21",
+    "parcel-bundler": "^1.12.5"
   }
 }
