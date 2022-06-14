@@ -1,8 +1,7 @@
 {
-  "name": "js-test",
+  "name": "lodash",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "parcel index.html",
     "build": "parcel build index.html"
@@ -10,11 +9,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "main": "lodash.js",
   "dependencies": {
-    "core-js": "^3.22.7"
+    "core-js": "^3.22.7",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "lodash": "^4.17.21",
     "parcel-bundler": "^1.12.5"
   }
 }
