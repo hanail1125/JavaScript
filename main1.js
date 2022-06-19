@@ -1,9 +1,17 @@
 import getType from './getType';
-import random from './getRandom';
-import _ from 'lodash';
+// import { random } from './getRandom';
+import * as R from './getRandom'
+
+// export default 와 export의 차이점 ============================
+//* export default : 이름을 지정하지 않고 하나만 export 할수 있고 import 시 이름을 바꾸 사용가능하며 {}를 사용하지 않음
+//* export : 이름을 지정하여 export 하며 여러개 export 할 수 있고 import 시 {} 반드시 사용한다.
+// console.log(random())
+// console.log(getType([1, 2, 3, 4]))
+// console.log(R.user.name)
+
 // import _, {functionsIn} from 'lodash';
 
-// typeof =======================================
+// typeof ======================================================
 
 // console.log(typeof 'hello dorld')
 // console.log(typeof 123)
@@ -22,13 +30,13 @@ import _ from 'lodash';
 // console.log(getType('Hanail'))
 
 
-// lodash 패키지 활용 =============================
+// lodash 패키지 활용 ===========================================
 
 // console.log('Hello, world')
 // console.log(_.camelCase('hello world'))
 
 
-// 삼항 연산자(ternary operator) ==================
+// 삼항 연산자(ternary operator) ================================
 
 // const a = 1 < 2;
 
@@ -704,3 +712,47 @@ import _ from 'lodash';
 // console.log(user.emails === copyUser.emails)
 // console.log('user', user)
 // console.log('copyUser', copyUser)
+
+
+// lodash 모듈 =====================================================
+// import _ from 'lodash';
+
+// const usersA = [
+//   {userId: '1', name: 'Hanail'},
+//   {userId: '2', name: 'Neo'}
+// ]
+
+// const usersB = [
+//   {userId: '1', name: 'Hanail'},
+//   {userId: '3', name: 'Amy'}
+// ]
+
+// const usersC = usersA.concat(usersB)
+// console.log('concat', usersC)
+
+//* _.uniqBy(중복요소, '중복구분속성')
+//* 중복된 요소를 제거하고 반환(중복요소가 하나일때 사용)
+// console.log('uniqBy', _.uniqBy(usersC, 'userId'))
+
+//* _.unionby(요소1, 요소2, '중복구분속성')
+//* 합치기전 중복요소 제거 후 병합하여 반환(중복 요소가 여러개 일때 사용)
+// const usersD = _.unionBy(usersA, usersB, 'userId')
+// console.log('unionBy', usersD)
+
+// const users = [
+//   {userId: '1', name:'Hanail'},
+//   {userId: '2', name:'Neo'},
+//   {userId: '3', name:'Amy'},
+//   {userId: '4', name:'Evan'},
+//   {userId: '5', name:'Lewis'}
+// ]
+
+// const findUser = _.find(users, {name: 'Amy'})
+// console.log(findUser)
+
+// const findUserIndex = _.findIndex(users, {name: 'Amy'})
+// console.log(findUserIndex)
+
+// const removeuser = _.remove(users, {name: "Hanail"})
+// console.log(removeuser)
+// console.log(users)
