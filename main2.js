@@ -54,7 +54,7 @@
 // localStorage.removeItem('user') // 데이터 삭제
 
 
-// OMDb를 axois를 통해서 정보를 가져오기 =======================================================
+// OMDb를 axois를 이용해서 정보 가져오기 =======================================================
 import axios from "axios";
 
 function fetchMovies() {
