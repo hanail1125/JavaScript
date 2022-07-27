@@ -32,29 +32,29 @@
 //* SessionStorage : 읽기 전용 속성, 페이지를 닫을 때 소멸
 
 // const user = {
-//   name: 'Hanail',
-//   age: 54,
+//   name: "Hanail",
+//   age: 55,
 //   email: [
-//     'hsi05200@gmail.com',
-//     'hanail011250@gmail.com'
+//     "hsi05200@gmail.com",
+//     "hanail011250@gmail.com"
 //   ]
 // }
 
-// const users = JSON.stringify(user) // JSON의 문자열로 변환
-// localStorage.setItem('user', users) // 문자열로 입력권장
-// const usersData = localStorage.getItem('user') // 읽기전용으로 가져오기
-// const userDatas = JSON.parse(usersData) // JavaScript 의 객체데이터로 변환
-// console.log(userDatas)
-
+// const users = JSON.stringify(user)
+// localStorage.setItem('user', users)
 // const str = localStorage.getItem('user')
 // const obj = JSON.parse(str)
+// console.log(obj)
 // obj.age = 17
 // console.log(obj)
 // localStorage.setItem('user', JSON.stringify(obj))
-// localStorage.removeItem('user') // 데이터 삭제
+// localStorage.removeItem('user')
+
+//* lowdb 를 이용한 DB 활용법 참조하기!!
 
 
 // OMDb를 axois를 이용해서 정보 가져오기 =======================================================
+//* 영화정보 주소 : https://www.omdbapi.com/?apikey=7035c60c&s=frozen
 import axios from "axios";
 
 function fetchMovies() {
@@ -62,10 +62,10 @@ function fetchMovies() {
     .get('https://www.omdbapi.com/?apikey=7035c60c&s=frozen')
     .then(res => {
       console.log(res)
-      const h1El = document.querySelector('h1')
-      const imgEl = document.querySelector('img')
-      h1El.textContent = res.data.Search[0].Title
-      imgEl.src = res.data.Search[0].Poster
+      // const h1El = document.querySelector('h1')
+      // const imgEl = document.querySelector('img')
+      // h1El.textContent = res.data.Search[0].Title
+      // imgEl.src = res.data.Search[0].Poster
     })
 }
 
